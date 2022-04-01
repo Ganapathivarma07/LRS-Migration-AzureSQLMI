@@ -1,10 +1,14 @@
 # Topic of the Template
 
-Topic Brief Description
+SQL Server migration to Azure SQL Managed instance using Log replay lab tutorial. This template allows you to create a SQL Server instance on Virtual Machine which acts as a source for migration and a Azure SQL Managed instance inside a new virtual network. Storage account is already provisioned which is required to copy and transfer SQL Server backups between source and target.
+
 
 # Topic Landing Zone
 
 Description of the Landing zone
+
+Solution overview and deployed resources. This deployment will create an In this tutorial, you migrate the AdventureWorks database from a self-hosted SQL Server instance to a SQL Server on Azure Virtual Machine with minimal downtime by using log replay service.
+
 
 
 ## Target audience
@@ -17,56 +21,36 @@ Example:
 
 # Product/LZ architecture
 
-The [Template.json](https://github.com/git-pranayshah/template/blob/master/template.json) Azure Resource Manager template will help you automatically deploy the diagram below, which includes:
+The [Template.json](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/master/template.json) Azure Resource Manager template will help you automatically deploy the diagram below, which includes:
 
 example!!!
 
 - A Virutal Network Gateway and a Public IP address.
 - A Network Security Group with the necessary outbound rules for Azure Virtual Desktop Hostpools to properly activate and work.
 
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/Landing_Zone_Template.png)
 
-[Template.json](https://github.com/git-pranayshah/template/blob/master/template.json) can be modified to match your current infrastructure needs.
+
+[Template.json](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/master/template.json) can be modified to match your current infrastructure needs.
 
 ## One Click Deploying Teamplate
 <!-- Powershell command for Translating Git URL for template.json
-    $url = "https://raw.githubusercontent.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/master/template.json"
+    $url = "https://raw.githubusercontent.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/master/template.json?token=GHSAT0AAAAAABTCLTR2TGKXPWTERQWXINHSYSHBGIQ"
     [uri]::EscapeDataString($url)
-    >> uri = https%3A%2F%2Fraw.githubusercontent.com%2FGanapathivarma07%2FLRS-Migration-AzureSQLMI%2Fmaster%2Ftemplate.json
+    >> uri = https%3A%2F%2Fgithub.com%2FGanapathivarma07%2FLRS-Migration-AzureSQLMI%2Fblob%2F
+master%2Ftemplate.json
 
 Base URL: https://portal.azure.com/#create/Microsoft.Template/uri
 Final URL: <Base URL>/<uri>
 -->
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FGanapathivarma07%2FLRS-Migration-AzureSQLMI%2Fmaster%2Ftemplate.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FGanapathivarma07%2FLRS-Migration-AzureSQLMI%2Fblob%2F
+master%2Ftemplate.json)
 
 
 ## Deploying an ARM Template using the Azure portal
 
 - Visit https://portal.azure.com
 
-Using the search bar on top type Templates
 
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/Search.png)
-
-- Create a new template
-
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/create.png)
-
-- Give a name and a description to the template
-
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/Name%20and%20Description.png)
-
-- Add for modified [Template.json](https://github.com/git-pranayshah/template/blob/master/template.json) and save it
-
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/add%20code.png)
-
-- Select the newly added template and click deploy
-
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/Select%20and%20deploy%20template.png)
-
-- Fill out the blanks with your details and click purchase
-
-![alt image](https://github.com/git-pranayshah/template/blob/master/images/Fill%20out%20the%20details%20and%20purchase.png)
 
 - Allow 30 minutes for the deployment to complete
 - Peer your Hub and Spoke Virtual Networks as needed
@@ -78,11 +62,14 @@ example!!
 - Security
 
 ## Related references
-example!!
-- https://docs.microsoft.com/en-us/azure/virtual-desktop/overview
-- https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
-- https://docs.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks-portal#peer-virtual-networks
-- https://docs.microsoft.com/en-us/azure/virtual-desktop/safe-url-list#virtual-machines
+
+
+1.	https://docs.microsoft.com/en-gb/azure/azure-sql/managed-instance/log-replay-service-migrate
+2.	https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/backup-overview-sql-server?view=sql-server-ver15
+3.	https://docs.microsoft.com/en-us/azure/storage/blobs/quickstart-storage-explorer
+4.	https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10
+5.	https://techcommunity.microsoft.com/t5/azure-sql-blog/migrate-databases-from-sql-server-to-sql-managed-instance-using/ba-p/2144303
+
 
 ## License & Contribute
 
