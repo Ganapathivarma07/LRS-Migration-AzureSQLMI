@@ -93,15 +93,6 @@ Please ensure the following requirements are met:
 - Place backup files for an individual database inside a separate folder in a flat-file structure (mandatory). Nested folders inside database folders are not supported.
 - Plan to complete the migration within 36 hours after you start LRS (mandatory). This is a grace period during which system-managed software patches are postponed.
 
-## Best practices
-
-We recommend the following best practices:
-- Run [Data Migration Assistant](/sql/dma/dma-overview) to validate that your databases are ready to be migrated to SQL Managed Instance. 
-- Split full and differential backups into multiple files, instead of using a single file.
-- Enable backup compression to help the network transfer speeds.
-- Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to the latest cmdlets released.
-
-
 ## Deployment steps
 
 1. Create Azure blob container in a storage account
@@ -125,6 +116,13 @@ Follow these steps in the diagram below to start the migration using log replay 
 | **2.2. Stop the operation if needed**. | If you need to stop the migration process, use PowerShell ([stop-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/stop-azsqlinstancedatabaselogreplay)) or the Azure CLI ([az_sql_midb_log_replay_stop](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-stop)). <br /><br /> Stopping the operation deletes the database that you're restoring to SQL Managed Instance. After you stop an operation, you can't resume LRS for a database. You need to restart the migration process from the beginning. |
 | **3. Cut over to the cloud when you're ready**. | Stop the application and workload. Take the last log-tail backup and upload it to Azure Blob Storage.<br /><br /> Complete the cutover by initiating an LRS `complete` operation with PowerShell ([complete-azsqlinstancedatabaselogreplay](/powershell/module/az.sql/complete-azsqlinstancedatabaselogreplay)) or the Azure CLI [az_sql_midb_log_replay_complete](/cli/azure/sql/midb/log-replay#az-sql-midb-log-replay-complete). This operation stops LRS and brings the database online for read and write workloads on SQL Managed Instance.<br /><br /> Repoint the application connection string from SQL Server to SQL Managed Instance. You will need to orchestrate this step yourself, either through a manual connection string change in your application, or automatically (for example, if your application can read the connection string from a property, or a database). |
 
+## Best practices
+
+We recommend the following best practices:
+- Run [Data Migration Assistant](/sql/dma/dma-overview) to validate that your databases are ready to be migrated to SQL Managed Instance. 
+- Split full and differential backups into multiple files, instead of using a single file.
+- Enable backup compression to help the network transfer speeds.
+- Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to the latest cmdlets released.
 
 ## Related references
 
