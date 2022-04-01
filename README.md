@@ -1,29 +1,46 @@
-# Topic of the Template
+# Tutorial: Migrate SQL Server to Azure SQL Managed Instance using Log Replay Service (Preview)
 
-SQL Server migration to Azure SQL Managed instance using Log replay lab tutorial. This template allows you to create a SQL Server instance on Virtual Machine which acts as a source for migration and a Azure SQL Managed instance inside a new virtual network. Storage account is already provisioned which is required to copy and transfer SQL Server backups between source and target.
+This template allows you to create a SQL Server instance on Virtual Machine which acts as a source for migration and a Azure SQL Managed instance inside a new virtual network. Storage account is already provisioned which is required to copy and transfer SQL Server backups between source and target.
 
 
-# Topic Landing Zone
+# Solution overview and deployed resources.
 
-Description of the Landing zone
-
-Solution overview and deployed resources. This deployment will create an In this tutorial, you migrate the AdventureWorks database from a self-hosted SQL Server instance to a SQL Server on Azure Virtual Machine with minimal downtime by using log replay service.
-
+In this tutorial, you will deploy resources required for the migration. Then, you migrate the AdventureWorks database from a source self-hosted SQL Server instance to a target SQL Server on Azure Virtual Machine with minimal downtime by using log replay service.
 
 
 ## Target audience
 
-Example:
 - Infrastructure Architect
 - Application Developer
 - IT Professional
 - Cloud Solution Architect
 
-# Product/LZ architecture
+# Architecture
 
 The [Template.json](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/master/template.json) Azure Resource Manager template will help you automatically deploy the diagram below, which includes:
 
-example!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - SQL Server instance on Azure VM.
 - Azure SQL managed instance inside a virtual network
@@ -32,7 +49,7 @@ example!!!
 
 [Template.json](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/master/template.json) can be modified to match your current infrastructure needs.
 
-## One Click Deploying Teamplate
+## One Click Deploying Template
 <!-- Powershell command for Translating Git URL for template.json
     $url = "https://raw.githubusercontent.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/master/template.json"
     [uri]::EscapeDataString($url)
@@ -52,8 +69,6 @@ Final URL: <Base URL>/<uri>
 - Allow 30 minutes for the deployment to complete
 
 ## Azure services and related products
-
-example!!
 
 - Azure Blob storage
 - Azure Virutal machine
@@ -109,7 +124,7 @@ We recommend the following best practices:
 
 ## Deployment steps
 
-1.	Create Azure blob container in a storage account
+1. Create Azure blob container in a storage account
 
 Follow these steps to Create Azure blob container 
 a. To create a container, expand the storage account you created in the proceeding step. 
@@ -132,7 +147,6 @@ Follow these steps in the diagram below to start the migration using log replay 
 
 
 ## Related references
-
 
 1.	https://docs.microsoft.com/en-gb/azure/azure-sql/managed-instance/log-replay-service-migrate
 2.	https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/backup-overview-sql-server?view=sql-server-ver15
