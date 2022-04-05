@@ -1,9 +1,9 @@
-# Tutorial: Migrate SQL Server to Azure SQL Managed Instance using Log Replay Service (Preview)
+# Tutorial: Migrate SQL Server to Azure SQL Managed Instance using Log Replay Service (Preview) (Under Construction)
 
 This template allows you to create a SQL Server instance on Virtual Machine which acts as a source for migration and a Azure SQL Managed instance inside a new virtual network. Storage account is already provisioned which is required to copy and transfer SQL Server backups between source and target.
 
 
-# Solution overview and deployed resources.
+# Solution overview and deployed resources. 
 
 In this tutorial, you will deploy resources required for the migration. Then, you migrate the AdventureWorks database from a source self-hosted SQL Server instance to a target SQL Server on Azure Virtual Machine with minimal downtime by using log replay service.
 
