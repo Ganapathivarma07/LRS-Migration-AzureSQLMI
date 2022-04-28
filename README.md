@@ -19,12 +19,13 @@ In this tutorial, you will deploy resources required for the migration. Then, yo
 
 The [Template.json](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/master/template.json) Azure Resource Manager template will help you automatically deploy the diagram below, which includes:
 
-
-![alt image](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/c65c38f40aa626403e011e6bf2a28e647ee5a102/Images/log-replay-service-Architecture.png)
-
 - SQL Server instance on Azure VM.
 - Azure SQL managed instance inside a virtual network
 - A storage account
+
+
+![alt image](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/c65c38f40aa626403e011e6bf2a28e647ee5a102/Images/log-replay-service-Architecture.png)
+
 
 
 [Template.json](https://github.com/Ganapathivarma07/LRS-Migration-AzureSQLMI/blob/master/template.json) can be modified to match your current infrastructure needs.
