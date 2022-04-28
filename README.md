@@ -5,7 +5,7 @@ This template allows you to create a SQL Server instance on Virtual Machine whic
 
 # Solution overview and deployed resources. 
 
-In this tutorial, you will deploy resources required for the migration. Then, you migrate the AdventureWorks database from a source self-hosted SQL Server instance to a target SQL Server on Azure Virtual Machine with minimal downtime by using log replay service.
+In this tutorial, you will deploy resources required for the migration. Then, you migrate the AdventureWorks database from a source self-hosted SQL Server instance to a target Azure SQL Server Managed Instance with minimal downtime by using log replay service.
 
 
 ## Target audience
